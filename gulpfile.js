@@ -42,6 +42,7 @@ const SassCompile = (done) => {
 // ファイル監視
 const watchFiles = (done) => {
   watch(EJSPath, EJSCompile)
+  watch(['./src/**/_*.ejs'], EJSCompile)
   watch(SassPath, series(SassCompile))
   watch(['./src/**/_*.scss'], series(SassCompile))
   done()

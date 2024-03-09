@@ -1,1 +1,16 @@
 @import './_reset.scss';
+
+.wrap {
+  max-width: 900px;
+  margin: 50px auto 100px;
+  padding: 0 25px;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    width: 50%;
+    margin-top: 30px;
+  }
+}

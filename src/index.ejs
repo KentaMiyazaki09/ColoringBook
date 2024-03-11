@@ -1,22 +1,23 @@
 <%- include('./_modules/_header.ejs') %>
 <div class="wrap">
   <h1>塗り絵ニャンコ</h1>
-  <div class="box-margin">
-    <%- include('./_modules/_palette.ejs') %>
-  </div>
+  <div class="box-margin"><%- include('./_modules/_palette.ejs') %></div>
   <div class="box-margin">
     <p>スタンプ</p>
     <%- include('./_modules/_stamp.ejs') %>
   </div>
   <div class="box-margin">
+    <button id="clear-btn">clear</button>
     <a id="download-btn" class="btn" href="#" download="canvas.jpg">ダウンロード</a>
   </div>
-  <div>
-    <div class="canvas-box">
-      <canvas id="canvas" width="700" height="700"></canvas>
-      <canvas id="canvas-items" class="canvas-items" width="700" height="700"></canvas>
-    </div>
-  </div>
-  <p><a href="https://jp.freepik.com/free-vector/hand-drawn-cat-outline-illustration_22890231.htm" target="_blank" rel="noopener noreferrer">著作者：freepik</a></p>
+  <div><%- include('./_modules/_canvas-box.ejs') %></div>
+  <p>
+    <a
+      href="https://jp.freepik.com/free-vector/hand-drawn-cat-outline-illustration_22890231.htm"
+      target="_blank"
+      rel="noopener noreferrer"
+      >著作者：freepik</a
+    >
+  </p>
 </div>
 <%- include('./_modules/_footer.ejs') %>

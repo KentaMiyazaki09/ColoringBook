@@ -1,4 +1,12 @@
-export default ({eyeLeft, eyeRight, patternBack, patternTail, patternFace, patternArm, patternLeg}) => {
+export default ({
+  eyeLeft,
+  eyeRight,
+  patternBack,
+  patternTail,
+  patternFace,
+  patternArm,
+  patternLeg
+}) => {
   return `<svg
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:cc="http://creativecommons.org/ns#"

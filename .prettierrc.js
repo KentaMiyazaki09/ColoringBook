@@ -3,15 +3,15 @@ module.exports = {
   tabWidth: 2,
   useTabs: false,
   semi: false,
-  singleQuote: false,
+  singleQuote: true,
   quoteProps: "as-needed",
   jsxSingleQuote: false,
-  trailingComma: "es5",
+  trailingComma: "none",
   bracketSpacing: true,
   bracketSameLine: false,
   arrowParens: "always",
   proseWrap: "preserve",
   htmlWhitespaceSensitivity: "css",
   endOfLine: "lf",
-  embeddedLanguageFormatting: "off",
+  embeddedLanguageFormatting: "off"
 }

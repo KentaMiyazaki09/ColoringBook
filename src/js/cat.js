@@ -24,7 +24,7 @@ export default ({eyeLeft, eyeRight, patternBack, patternTail, patternFace, patte
     id="g10">
     <path
       id="path12"
-      style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+      style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none"
       d="M 0,0 H 500 V 500 H 0 Z" /><g
       id="g14"><g
         clip-path="url(#clipPath20)"

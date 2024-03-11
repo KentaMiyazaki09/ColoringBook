@@ -1,9 +1,13 @@
 @import './_reset.scss';
 
+.myCavans {
+  background-color: #fff;
+}
+
 .wrap {
   max-width: 900px;
-  margin: 50px auto 100px;
-  padding: 0 25px;
+  padding: 50px 25px;
+  margin: 0 auto;
 }
 
 .palette {
@@ -11,12 +15,12 @@
   flex-wrap: wrap;
   > * {
     width: 25%;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 
-.btn-box {
-  margin-top: 20px;
+.box-margin {
+  margin-top: 30px;
 }
 .btn {
   border: 1px solid #999;

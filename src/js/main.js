@@ -1,21 +1,21 @@
-import cat from "./cat";
-import moon from "./moon";
-import hat from "./hat";
+import cat from "./cat"
+import moon from "./moon"
+import hat from "./hat"
 
 window.addEventListener("DOMContentLoaded", () => {
-  const Doc = document;
+  const Doc = document
 
   // 猫を描画するcanvas
-  const canvas = Doc.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
+  const canvas = Doc.getElementById("canvas")
+  const ctx = canvas.getContext("2d")
 
-  ctx.beginPath();
-  ctx.fillStyle = "rgb(255, 255, 255)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath()
+  ctx.fillStyle = "rgb(255, 255, 255)"
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
 
   // その他を描画するcanvas
-  const canvasItems = Doc.getElementById("canvas-items");
-  const ctxItems = canvasItems.getContext("2d");
+  const canvasItems = Doc.getElementById("canvas-items")
+  const ctxItems = canvasItems.getContext("2d")
 
   function DrawingCat() {
     // 色の取得
@@ -27,46 +27,46 @@ window.addEventListener("DOMContentLoaded", () => {
       patternFace: Doc.getElementById("pattern-face").value,
       patternArm: Doc.getElementById("pattern-arm").value,
       patternLeg: Doc.getElementById("pattern-leg").value,
-    };
-    const catSVG = cat(catColors);
+    }
+    const catSVG = cat(catColors)
     // canvasにsvgを書き出す
-    const Img = new Image();
-    Img.src = `data:image/svg+xml;base64, ${btoa(catSVG)}`;
+    const Img = new Image()
+    Img.src = `data:image/svg+xml;base64, ${btoa(catSVG)}`
     Img.onload = () => {
-      ctx.drawImage(Img, 0, 0, 666, 666);
-    };
+      ctx.drawImage(Img, 0, 0, 666, 666)
+    }
 
     // スタンプ描画
     const stamps = {
       moon: Doc.getElementById("stamp-moon").checked,
       hat: Doc.getElementById("stamp-hat").checked,
-    };
+    }
 
     if (stamps.hat) {
-      const hatSVG = hat({ size: 512 });
-      const imgHat = new Image();
-      imgHat.src = `data:image/svg+xml;base64, ${btoa(hatSVG)}`;
+      const hatSVG = hat({ size: 512 })
+      const imgHat = new Image()
+      imgHat.src = `data:image/svg+xml;base64, ${btoa(hatSVG)}`
       imgHat.onload = () => {
-        ctxItems.drawImage(imgHat, 105, -40, 200, 200);
-      };
+        ctxItems.drawImage(imgHat, 105, -40, 200, 200)
+      }
     }
 
     if (stamps.moon) {
-      const moonSVG = moon({ size: 512 });
-      const imgMoon = new Image();
-      imgMoon.src = `data:image/svg+xml;base64, ${btoa(moonSVG)}`;
+      const moonSVG = moon({ size: 512 })
+      const imgMoon = new Image()
+      imgMoon.src = `data:image/svg+xml;base64, ${btoa(moonSVG)}`
       imgMoon.onload = () => {
-        ctxItems.drawImage(imgMoon, 400, 0, 200, 200);
-      };
+        ctxItems.drawImage(imgMoon, 400, 0, 200, 200)
+      }
     }
   }
 
-  DrawingCat();
-  Doc.getElementById("palette").addEventListener("change", DrawingCat);
-  Doc.getElementById("stamp").addEventListener("change", DrawingCat);
+  DrawingCat()
+  Doc.getElementById("palette").addEventListener("change", DrawingCat)
+  Doc.getElementById("stamp").addEventListener("change", DrawingCat)
 
   // ダウンロードボタン
   Doc.getElementById("download-btn").addEventListener("click", function () {
-    this.href = canvas.toDataURL("image/png");
-  });
-});
+    this.href = canvas.toDataURL("image/png")
+  })
+})

@@ -6,20 +6,16 @@
   </div>
   <div class="box-margin">
     <p>スタンプ</p>
-    <form id="stamp">
-      <label>月
-        <input id="stamp-moon" type="checkbox" value="">
-      </label>
-      <label>帽子
-        <input id="stamp-hat" type="checkbox" value="">
-      </label>
-    </form>
+    <%- include('./_modules/_stamp.ejs') %>
   </div>
   <div class="box-margin">
     <a id="download-btn" class="btn" href="#" download="canvas.jpg">ダウンロード</a>
   </div>
   <div>
-    <canvas id="canvas" width="700" height="700"></canvas>
+    <div class="canvas-box">
+      <canvas id="canvas" width="700" height="700"></canvas>
+      <canvas id="canvas-items" class="canvas-items" width="700" height="700"></canvas>
+    </div>
   </div>
   <p><a href="https://jp.freepik.com/free-vector/hand-drawn-cat-outline-illustration_22890231.htm" target="_blank" rel="noopener noreferrer">著作者：freepik</a></p>
 </div>

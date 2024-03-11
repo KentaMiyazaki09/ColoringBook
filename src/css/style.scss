@@ -27,3 +27,12 @@
   padding: 5px 10px;
   display: inline-block;
 }
+
+.canvas-box {
+  position: relative;
+}
+.canvas-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

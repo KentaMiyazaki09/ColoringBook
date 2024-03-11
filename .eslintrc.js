@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: 'standard',
+  extends: ['standard', 'prettier'],
   overrides: [
     {
       env: {
@@ -20,6 +20,6 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'space-before-function-paren': ['error', 'never']
+    'space-before-function-paren': ['error', { named: 'never' }]
   }
 }

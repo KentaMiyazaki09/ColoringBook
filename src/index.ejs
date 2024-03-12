@@ -5,10 +5,10 @@
   <div class="box-margin">
     <p>スタンプ</p>
     <%- include('./_modules/_stamp.ejs') %>
+    <button class="clear-btn">clear</button>
   </div>
   <div class="box-margin">
-    <button id="clear-btn">clear</button>
-    <a id="download-btn" class="btn" href="#" download="canvas.jpg">ダウンロード</a>
+    <button class="concat-btn">完成！</button>
   </div>
   <div><%- include('./_modules/_canvas-box.ejs') %></div>
   <p>
@@ -20,4 +20,4 @@
     >
   </p>
 </div>
-<%- include('./_modules/_footer.ejs') %>
+<%- include('./_modules/_download.ejs') %> <%- include('./_modules/_footer.ejs') %>

@@ -1,4 +1,5 @@
 @import './_reset.scss';
+@import './_modules/download';
 
 .myCavans {
   background-color: #fff;
@@ -31,8 +32,18 @@
 .canvas-box {
   position: relative;
 }
-.canvas-item {
+.stamps-canvas {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.download-btn {
+  color: #fff;
+  padding: 20px 10px;
+  border: 1px solid #999;
+  display: inline-block;
+  &:hover {
+    color: blue;
+  }
 }

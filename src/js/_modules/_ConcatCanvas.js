@@ -30,11 +30,7 @@ export default () => {
   }
 
   document.querySelector('.concat-btn').addEventListener('click', () => {
-    concatCanvas('#concat', ['.canvas'])
-  })
-  document.getElementById('download-btn').addEventListener('click', function () {
-    const canvas = document.querySelector('#concat')
-    const ctx = canvas.getContext('2d')
-    this.href = ctx.canvas.toDataURL('image/jpeg')
+    document.querySelector('.download').classList.add('is-active')
+    concatCanvas('.concat-canvas', ['.canvas', '.stamps-canvas'])
   })
 }

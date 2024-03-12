@@ -1,5 +1,10 @@
 export default {
-  moon: `<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 256px; height: 256px; opacity: 1;" xml:space="preserve">
+  moon: {
+    x: 400,
+    y: 0,
+    width: 200,
+    height: 200,
+    svg: `<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 256px; height: 256px; opacity: 1;" xml:space="preserve">
     <g>
       <polygon points="100.704,270.59 134.681,252.713 168.721,270.59 162.236,232.711 189.75,205.906 151.701,200.329 
         134.681,165.862 117.723,200.329 79.675,205.906 107.169,232.711 " style="fill: rgb(75, 75, 75);"></polygon>
@@ -11,8 +16,14 @@ export default {
         c-38.507,0-74.74-9.478-106.802-25.957C48.329,439.414,142.423,512,253.556,512c138.108,0,250.099-111.991,250.099-250.1
         C503.655,150.778,431.129,56.654,330.87,24.092z" style="fill: rgb(75, 75, 75);"></path>
     </g>
-    </svg>`,
-  hat: `<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 256px; height: 256px; opacity: 1;" xml:space="preserve">
+    </svg>`
+  },
+  hat: {
+    x: 100,
+    y: -20,
+    width: 200,
+    height: 200,
+    svg: `<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 256px; height: 256px; opacity: 1;" xml:space="preserve">
     <style type="text/css">
       .st0{fill:#4B4B4B;}
     </style>
@@ -24,4 +35,5 @@ export default {
         C523.321,313.488,498.787,290.069,470.098,289.729z" style="fill: rgb(75, 75, 75);"></path>
     </g>
     </svg>`
+  }
 }

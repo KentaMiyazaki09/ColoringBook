@@ -5,24 +5,33 @@ import SVGList from './SVG/_stamps'
  * スタンプボタンが押されたら新しいcanvasを生成して.canvas-boxに追加
  */
 
-const canvasBox = document.querySelector('.canvas-box')
 const stampButtons = document.querySelectorAll('.stamp-button')
+const canvas = document.querySelector('.stamps-canvas')
+const ctx = canvas.getContext('2d')
 
-export default () => {
+function DrawingStamp() {
   stampButtons.forEach((button) => {
     button.addEventListener('click', function () {
-      const itemCanvas = document.createElement('canvas')
-      itemCanvas.classList.add('canvas-item')
-      itemCanvas.setAttribute('width', 700)
-      itemCanvas.setAttribute('height', 700)
-      const cxtItemCanvas = itemCanvas.getContext('2d')
-
       const itemImg = new Image()
-      itemImg.src = `data:image/svg+xml;base64, ${btoa(SVGList[`${this.name}`])}`
+
+      const { svg, x, y, width, height } = SVGList[this.name]
+      itemImg.src = `data:image/svg+xml;base64, ${btoa(svg)}`
       itemImg.onload = function () {
-        cxtItemCanvas.drawImage(this, 0, 0, 200, 200)
-        canvasBox.appendChild(itemCanvas)
+        ctx.drawImage(this, x, y, width, height)
       }
     })
   })
 }
+
+/**
+ * スタンプ削除
+ * 削除ボタンでcanvasをクリア
+ */
+const clearBtn = document.querySelector('.clear-btn')
+function ClearStamps() {
+  clearBtn.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+  })
+}
+
+export { DrawingStamp, ClearStamps }

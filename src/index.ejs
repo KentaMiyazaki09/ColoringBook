@@ -1,15 +1,9 @@
 <%- include('./_modules/_header.ejs') %>
 <div class="wrap">
   <h1>塗り絵ニャンコ</h1>
-  <div class="box-margin"><%- include('./_modules/_palette.ejs') %></div>
-  <div class="box-margin">
-    <p>スタンプ</p>
-    <%- include('./_modules/_stamp.ejs') %>
-    <button class="clear-btn">clear</button>
-  </div>
-  <div class="box-margin">
-    <button class="concat-btn">完成！</button>
-  </div>
+
+  <%- include('./_modules/_tool.ejs') %>
+
   <div><%- include('./_modules/_canvas-box.ejs') %></div>
   <p>
     <a

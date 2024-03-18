@@ -1,0 +1,8 @@
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    width: 25%;
+    margin-top: 5px;
+  }
+}

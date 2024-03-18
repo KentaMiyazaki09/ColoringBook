@@ -1,7 +1,9 @@
 import DrawingCat from './_modules/_DrawingCat'
 import { DrawingStamp, ClearStamps } from './_modules/_DrawingStamp'
 
-import concatCanvas from './_modules/_ConcatCanvas'
+import ConcatCanvas from './_modules/_ConcatCanvas'
+
+import DownloadButton from './_modules/_DownloadButton'
 
 window.addEventListener('DOMContentLoaded', () => {
   /**
@@ -19,15 +21,12 @@ window.addEventListener('DOMContentLoaded', () => {
   ClearStamps()
 
   /**
+   * 完成ボタン
+   */
+  ConcatCanvas()
+
+  /**
    * ダウンロードボタン
    */
-  concatCanvas()
-
-  document.querySelector('.download-btn').addEventListener('click', function () {
-    this.href = document
-      .querySelector('.concat-canvas')
-      .getContext('2d')
-      .canvas.toDataURL('image/jpeg')
-    document.querySelector('.download').classList.remove('is-active')
-  })
+  DownloadButton()
 })

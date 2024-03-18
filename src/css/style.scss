@@ -1,5 +1,8 @@
 @import './_reset.scss';
 @import './_modules/download';
+@import './_modules/tool';
+@import './_modules/palette';
+@import './_modules/stamp';
 
 .myCavans {
   background-color: #fff;
@@ -9,24 +12,6 @@
   max-width: 900px;
   padding: 50px 25px;
   margin: 0 auto;
-}
-
-.palette {
-  display: flex;
-  flex-wrap: wrap;
-  > * {
-    width: 25%;
-    margin-top: 20px;
-  }
-}
-
-.box-margin {
-  margin-top: 30px;
-}
-.btn {
-  border: 1px solid #999;
-  padding: 5px 10px;
-  display: inline-block;
 }
 
 .canvas-box {
@@ -43,6 +28,14 @@
   padding: 20px 10px;
   border: 1px solid #999;
   display: inline-block;
+  &:hover {
+    color: blue;
+  }
+}
+
+.concat-btn {
+  padding: 10px 10px;
+  border: 1px solid #999;
   &:hover {
     color: blue;
   }

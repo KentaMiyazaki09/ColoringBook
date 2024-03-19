@@ -1,8 +1,16 @@
 @import './_reset.scss';
+
+$trans: 0.3s;
+
 @import './_modules/download';
 @import './_modules/tool';
 @import './_modules/palette';
 @import './_modules/stamp';
+
+body {
+  font-size: 14px;
+  color: #333;
+}
 
 .myCavans {
   background-color: #fff;
@@ -36,7 +44,13 @@
 .concat-btn {
   padding: 10px 10px;
   border: 1px solid #999;
+  transition: all $trans ease;
+  font-weight: bold;
   &:hover {
     color: blue;
   }
+}
+
+.clear-btn {
+  margin-top: 20px;
 }

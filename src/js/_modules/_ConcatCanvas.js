@@ -31,6 +31,7 @@ export default () => {
 
   document.querySelector('.concat-btn').addEventListener('click', () => {
     document.querySelector('.download').classList.add('is-active')
-    concatCanvas('.concat-canvas', ['.canvas', '.stamps-canvas'])
+    concatCanvas('.concat-canvas', ['.canvas', '.canvas-stamps'])
+    // concatCanvas('.concat-canvas', ['.canvas-background', '.canvas', '.canvas-stamps'])
   })
 }

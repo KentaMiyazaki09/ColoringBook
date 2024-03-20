@@ -6,7 +6,7 @@ import SVGList from './SVG/_stamps'
  */
 
 const stampButtons = document.querySelectorAll('.stamp-button')
-const canvas = document.querySelector('.stamps-canvas')
+const canvas = document.querySelector('.canvas-stamps')
 const ctx = canvas.getContext('2d')
 
 function DrawingStamp() {

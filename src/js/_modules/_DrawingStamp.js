@@ -1,24 +1,20 @@
 import SVGList from './SVG/_stamps'
+import Canvas from './Class/_Canvas'
+
+/**
+ * スタンプを表示するCanvas
+ */
+const StampCanvas = new Canvas(document.querySelector('.canvas-stamps'), SVGList)
 
 /**
  * スタンプ描画
  * スタンプボタンが押されたら新しいcanvasを生成して.canvas-boxに追加
  */
-
 const stampButtons = document.querySelectorAll('.stamp-button')
-const canvas = document.querySelector('.canvas-stamps')
-const ctx = canvas.getContext('2d')
-
 function DrawingStamp() {
   stampButtons.forEach((button) => {
     button.addEventListener('click', function () {
-      const itemImg = new Image()
-
-      const { svg, x, y, width, height } = SVGList[this.name]
-      itemImg.src = `data:image/svg+xml;base64, ${btoa(svg)}`
-      itemImg.onload = function () {
-        ctx.drawImage(this, x, y, width, height)
-      }
+      StampCanvas.draw(this.name)
     })
   })
 }
@@ -30,7 +26,7 @@ function DrawingStamp() {
 const clearBtn = document.querySelector('.clear-btn')
 function ClearStamps() {
   clearBtn.addEventListener('click', () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    StampCanvas.clear()
   })
 }
 

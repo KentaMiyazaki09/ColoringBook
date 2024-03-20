@@ -6,6 +6,7 @@ import ConcatCanvas from './_modules/_ConcatCanvas'
 
 import DownloadButton from './_modules/_DownloadButton'
 
+const palette = document.querySelector('.palette')
 window.addEventListener('DOMContentLoaded', () => {
   /**
    * ツールメニュー
@@ -17,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
    * 色を変えたら再描画
    */
   DrawingCat()
-  document.querySelector('.palette').addEventListener('change', () => DrawingCat())
+  palette.addEventListener('change', () => DrawingCat())
 
   /**
    * スタンプ描画

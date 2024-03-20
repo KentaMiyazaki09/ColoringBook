@@ -4,6 +4,7 @@ export default () => {
       .querySelector('.concat-canvas')
       .getContext('2d')
       .canvas.toDataURL('image/jpeg')
+
     document.querySelector('.download').classList.remove('is-active')
   })
 }
